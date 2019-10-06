@@ -461,13 +461,14 @@ EOF
 }
 
 set_p_src() {
+  echo
   beep_attention
   # Do not append a trailing slash (/) to the end of the path prefix.
   read -p "Enter a path to the Enlightenment source folders (e.g. /home/lucas or /home/lucas/testing): " mypath
   mkdir -p "$mypath"/sources
   ESRC="$mypath"/sources
   sleep 1
-  printf "\n\n%s\n\n" "You have chosen: $ESRC"
+  printf "\n%s\n\n" "You have chosen: $ESRC"
 }
 
 get_preq() {

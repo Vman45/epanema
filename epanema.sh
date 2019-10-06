@@ -485,7 +485,7 @@ set_p_src() {
   mkdir -p "$mypath"/sources
   ESRC="$mypath"/sources
   sleep 1
-  printf "\n%s\n\n" "You have chosen: $ESRC"
+  printf "\n\n%s\n\n" "You have chosen: $ESRC"
 }
 
 get_preq() {

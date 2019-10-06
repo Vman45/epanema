@@ -62,50 +62,32 @@ RELEASE=$(lsb_release -sc)
 DISTRIBUTOR=$(lsb_release -i | cut -f2)
 
 # Build dependencies, recommended(2) and script-related(3) packages.
-#DEPS="aspell automake build-essential ccache check cmake cowsay doxygen \
-#faenza-icon-theme git gstreamer1.0-libav gstreamer1.0-plugins-bad \
-#gstreamer1.0-plugins-ugly imagemagick libasound2-dev libavahi-client-dev \
-#libblkid-dev libbluetooth-dev libbullet-dev libcogl-gles2-dev libexif-dev \
-#libfontconfig1-dev libfreetype6-dev libfribidi-dev libgeoclue-2-dev \
-#libgif-dev libcurl4-gnutls-dev libgnutls28-dev libgstreamer1.0-dev \
-#libgstreamer-plugins-base1.0-dev libharfbuzz-dev libibus-1.0-dev \
-#libinput-dev libjpeg-dev libblkid-dev libluajit-5.1-dev liblz4-dev \
-#libmount-dev libopenjp2-7-dev libosmesa6-dev libpam0g-dev \
-#libpoppler-cpp-dev libpoppler-dev libpoppler-private-dev \
-#libproxy-dev libpulse-dev libraw-dev librsvg2-dev libscim-dev \
-#libsndfile1-dev libspectre-dev libssl-dev libsystemd-dev libtiff5-dev \
-#libtool libudev-dev libudisks2-dev libunibreak-dev libunwind-dev \
-#libuv1-dev libvlc-dev libwebp-dev libxcb-keysyms1-dev libxcursor-dev \
-#libxine2-dev libxinerama-dev libxkbcommon-x11-dev libxkbfile-dev \
-#libxrandr-dev libxss-dev libxtst-dev linux-tools-common lolcat \
-#manpages-dev meson ninja-build texlive-base valgrind wayland-protocols \
-#wmctrl xserver-xephyr xwayland zenity"
+DEPS="aspell automake build-essential ccache check cmake cowsay doxygen \
+faenza-icon-theme git gstreamer1.0-libav gstreamer1.0-plugins-bad \
+gstreamer1.0-plugins-ugly imagemagick libasound2-dev libavahi-client-dev \
+libblkid-dev libbluetooth-dev libbullet-dev libcogl-gles2-dev libexif-dev \
+libfontconfig1-dev libfreetype6-dev libfribidi-dev libgeoclue-2-dev \
+libgif-dev libcurl4-gnutls-dev libgnutls28-dev libgstreamer1.0-dev \
+libgstreamer-plugins-base1.0-dev libharfbuzz-dev libibus-1.0-dev \
+libinput-dev libjpeg-dev libblkid-dev libluajit-5.1-dev liblz4-dev \
+libmount-dev libopenjp2-7-dev libosmesa6-dev libpam0g-dev \
+libpoppler-cpp-dev libpoppler-dev libpoppler-private-dev \
+libproxy-dev libpulse-dev libraw-dev librsvg2-dev libscim-dev \
+libsndfile1-dev libspectre-dev libssl-dev libsystemd-dev libtiff5-dev \
+libtool libudev-dev libudisks2-dev libunibreak-dev libunwind-dev \
+libuv1-dev libvlc-dev libwebp-dev libxcb-keysyms1-dev libxcursor-dev \
+libxine2-dev libxinerama-dev libxkbcommon-x11-dev libxkbfile-dev \
+libxrandr-dev libxss-dev libxtst-dev linux-tools-common lolcat \
+manpages-dev meson ninja-build texlive-base valgrind wayland-protocols \
+wmctrl xserver-xephyr xwayland zenity"
 
 # (2) aspell, cmake, faenza-icon-theme, gstreamer1.0-libav,
 # gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly,
-# imagemagick, libexif-dev, libgeoclue-2-dev,
+# imagemagick, libexif-dev, libgeoclue-2-dev, libharfbuzz-dev,
 # libproxy-dev, libscim-dev, libosmesa6-dev, linux-tools-common,
 # libvlc-dev, libxine2-dev, manpages-dev, texlive-base,
 # valgrind, xserver-xephyr
 # (3) ccache, cowsay, git, lolcat, wmctrl, zenity
-
-DEPS="automake build-essential ccache check cowsay doxygen \
-git libasound2-dev libavahi-client-dev libharfbuzz-dev \
-libblkid-dev libbluetooth-dev libbullet-dev libcogl-gles2-dev \
-libfontconfig1-dev libfreetype6-dev libfribidi-dev \
-libgif-dev libcurl4-gnutls-dev libgnutls28-dev libgstreamer1.0-dev \
-libgstreamer-plugins-base1.0-dev libibus-1.0-dev \
-libinput-dev libjpeg-dev libblkid-dev libluajit-5.1-dev liblz4-dev \
-libmount-dev libopenjp2-7-dev libpam0g-dev \
-libpoppler-cpp-dev libpoppler-dev libpoppler-private-dev \
-libpulse-dev libraw-dev librsvg2-dev \
-libsndfile1-dev libspectre-dev libssl-dev libsystemd-dev libtiff5-dev \
-libtool libudev-dev libudisks2-dev libunibreak-dev libunwind-dev \
-libuv1-dev libwebp-dev libxcb-keysyms1-dev libxcursor-dev \
-libxinerama-dev libxkbcommon-x11-dev libxkbfile-dev \
-libxrandr-dev libxss-dev libxtst-dev lolcat \
-meson ninja-build wayland-protocols \
-wmctrl xwayland zenity"
 
 # Programs from GIT repositories (latest source code).
 CLONEFL="git clone https://git.enlightenment.org/core/efl.git"

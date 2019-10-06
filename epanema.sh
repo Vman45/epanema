@@ -83,14 +83,14 @@ DISTRIBUTOR=$(lsb_release -i | cut -f2)
 
 # (2) aspell, cmake, faenza-icon-theme, gstreamer1.0-libav,
 # gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly,
-# imagemagick, libexif-dev, libgeoclue-2-dev, libharfbuzz-dev,
+# imagemagick, libexif-dev, libgeoclue-2-dev,
 # libproxy-dev, libscim-dev, libosmesa6-dev, linux-tools-common,
 # libvlc-dev, libxine2-dev, manpages-dev, texlive-base,
 # valgrind, xserver-xephyr
 # (3) ccache, cowsay, git, lolcat, wmctrl, zenity
 
 DEPS="automake build-essential ccache check cowsay doxygen \
-git libasound2-dev libavahi-client-dev \
+git libasound2-dev libavahi-client-dev libharfbuzz-dev \
 libblkid-dev libbluetooth-dev libbullet-dev libcogl-gles2-dev \
 libfontconfig1-dev libfreetype6-dev libfribidi-dev \
 libgif-dev libcurl4-gnutls-dev libgnutls28-dev libgstreamer1.0-dev \

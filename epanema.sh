@@ -64,7 +64,7 @@ DISTRIBUTOR=$(lsb_release -i | cut -f2)
 # Build dependencies, recommended(2) and script-related(3) packages.
 DEPS="aspell automake build-essential ccache check cmake cowsay doxygen \
 faenza-icon-theme git gstreamer1.0-libav gstreamer1.0-plugins-bad \
-gstreamer1.0-plugins-ugly imagemagick libasound2-dev libavahi-client-dev \
+gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly imagemagick libasound2-dev libavahi-client-dev \
 libblkid-dev libbluetooth-dev libbullet-dev libcogl-gles2-dev \
 libcurl4-gnutls-dev libexif-dev libfontconfig1-dev libfreetype6-dev \
 libfribidi-dev libgeoclue-2-dev libgif-dev libgnutls28-dev \
@@ -82,10 +82,11 @@ manpages-dev meson ninja-build texlive-base valgrind wayland-protocols \
 wmctrl xserver-xephyr xwayland zenity"
 
 # (2) aspell, cmake, faenza-icon-theme, gstreamer1.0-libav,
-# gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly,
-# imagemagick, libexif-dev, libgeoclue-2-dev, libproxy-dev,
-# libscim-dev, libosmesa6-dev, linux-tools-common,
-# libvlc-dev, libxine2-dev, manpages-dev, texlive-base,
+# gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good ,
+# gstreamer1.0-plugins-ugly, imagemagick, libexif-dev,
+# libgeoclue-2-dev, libproxy-dev, libscim-dev,
+# libosmesa6-dev, linux-tools-common, libvlc-dev,
+# libxine2-dev, manpages-dev, texlive-base,
 # valgrind, xserver-xephyr
 # (3) ccache, cowsay, git, lolcat, wmctrl, zenity
 

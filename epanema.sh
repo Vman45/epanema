@@ -89,7 +89,7 @@ DISTRIBUTOR=$(lsb_release -i | cut -f2)
 # valgrind, xserver-xephyr
 # (3) ccache, cowsay, git, lolcat, wmctrl, zenity
 
-DEPS="automake build-essential check cowsay doxygen \
+DEPS="automake build-essential ccache check cowsay doxygen \
 git libasound2-dev libavahi-client-dev \
 libblkid-dev libbluetooth-dev libbullet-dev libcogl-gles2-dev \
 libfontconfig1-dev libfreetype6-dev libfribidi-dev \

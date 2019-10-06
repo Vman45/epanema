@@ -83,8 +83,8 @@ wmctrl xserver-xephyr xwayland zenity"
 
 # (2) aspell, cmake, faenza-icon-theme, gstreamer1.0-libav,
 # gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly,
-# imagemagick, libexif-dev, libgeoclue-2-dev, libharfbuzz-dev,
-# libproxy-dev, libscim-dev, libosmesa6-dev, linux-tools-common,
+# imagemagick, libexif-dev, libgeoclue-2-dev, libproxy-dev,
+# libscim-dev, libosmesa6-dev, linux-tools-common,
 # libvlc-dev, libxine2-dev, manpages-dev, texlive-base,
 # valgrind, xserver-xephyr
 # (3) ccache, cowsay, git, lolcat, wmctrl, zenity

@@ -547,7 +547,7 @@ install_now() {
   # edit /etc/gdm3/custom.conf and uncomment the line "#WaylandEnable=false"
   # Then reboot your system.
 
-  ###cp -f $DLDIR/epanema.sh $HOME/.local/bin
+  cp -f $DLDIR/epanema.sh $HOME/.local/bin
 }
 
 update_go() {
@@ -561,9 +561,9 @@ update_go() {
     printf "\n$BDG%s $OFF%s\n\n" "* UPDATING ENLIGHTENMENT DESKTOP: RELEASE BUILD *"
   fi
 
-  ###cp -f $SCRFLR/epanema.sh $HOME/.local/bin
-  ###chmod +x $HOME/.local/bin/epanema.sh
-  ###sleep 1
+  cp -f $SCRFLR/epanema.sh $HOME/.local/bin
+  chmod +x $HOME/.local/bin/epanema.sh
+  sleep 1
 
   printf "\n$BLD%s $OFF%s\n\n" "Satisfying dependencies under Ubuntu ${RELEASE^}..."
   bin_deps
@@ -593,9 +593,9 @@ wld_go() {
     printf "\n$BDY%s $OFF%s\n\n" "* UPDATING ENLIGHTENMENT DESKTOP: WAYLAND BUILD *"
   fi
 
-  ###cp -f $SCRFLR/epanema.sh $HOME/.local/bin
-  ###chmod +x $HOME/.local/bin/epanema.sh
-  ###sleep 1
+  cp -f $SCRFLR/epanema.sh $HOME/.local/bin
+  chmod +x $HOME/.local/bin/epanema.sh
+  sleep 1
 
   printf "\n$BLD%s $OFF%s\n\n" "Satisfying dependencies under Ubuntu ${RELEASE^}..."
   bin_deps

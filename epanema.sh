@@ -82,7 +82,7 @@ manpages-dev meson ninja-build texlive-base valgrind wayland-protocols \
 wmctrl xserver-xephyr xwayland zenity"
 
 # (2) aspell, cmake, faenza-icon-theme, gstreamer1.0-libav,
-# gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good ,
+# gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good,
 # gstreamer1.0-plugins-ugly, imagemagick, libexif-dev,
 # libgeoclue-2-dev, libproxy-dev, libscim-dev,
 # libosmesa6-dev, linux-tools-common, libvlc-dev,

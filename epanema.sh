@@ -553,10 +553,10 @@ install_now() {
 update_go() {
   clear
   if [ ! -d $ESRC/enlightenment23 ]; then
-    printf "\n$BDR%s %s\n\n" "NOTHING TO UPDATE!"
-    sleep 2
-    clear
-    sel_menu
+    printf "\n$BDR%s %s\n" "NOTHING TO UPDATE!"
+    printf "$BDR%s $OFF%s\n\n" "SCRIPT ABORTED."
+    beep_exit
+    exit 1
   else
     printf "\n$BDG%s $OFF%s\n\n" "* UPDATING ENLIGHTENMENT DESKTOP: RELEASE BUILD *"
   fi
@@ -585,10 +585,10 @@ update_go() {
 wld_go() {
   clear
   if [ ! -d $ESRC/enlightenment23 ]; then
-    printf "\n$BDR%s %s\n\n" "NOTHING TO UPDATE!"
-    sleep 2
-    clear
-    sel_menu
+    printf "\n$BDR%s %s\n" "NOTHING TO UPDATE!"
+    printf "$BDR%s $OFF%s\n\n" "SCRIPT ABORTED."
+    beep_exit
+    exit 1
   else
     printf "\n$BDY%s $OFF%s\n\n" "* UPDATING ENLIGHTENMENT DESKTOP: WAYLAND BUILD *"
   fi

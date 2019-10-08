@@ -468,8 +468,8 @@ set_p_src() {
   mkdir -p "$mypath"/sources
   ESRC="$mypath"/sources
   echo $ESRC >$HOME/.cache/ebuilds/storepath
-  sleep 1
   printf "\n%s\n\n" "You have chosen: $ESRC"
+  sleep 1
 }
 
 get_preq() {

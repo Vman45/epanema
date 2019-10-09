@@ -55,7 +55,7 @@ PREFIX=/usr/local
 DLDIR=$(xdg-user-dir DOWNLOAD)
 DOCDIR=$(xdg-user-dir DOCUMENTS)
 ICNV=libiconv-1.16
-SCRFLR=$HOME/epanema
+SCRFLR=$HOME/.epanema
 CONFG="./configure --prefix=$PREFIX"
 SNIN="sudo ninja -C build install"
 RELEASE=$(lsb_release -sc)

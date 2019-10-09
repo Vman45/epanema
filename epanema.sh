@@ -59,7 +59,6 @@ SCRFLR=$HOME/epanema
 CONFG="./configure --prefix=$PREFIX"
 SNIN="sudo ninja -C build install"
 RELEASE=$(lsb_release -sc)
-DISTRIBUTOR=$(lsb_release -i | cut -f2)
 
 # Build dependencies, recommended(2) and script-related(3) packages.
 DEPS="aspell automake build-essential ccache check cmake cowsay doxygen \

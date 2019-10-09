@@ -10,7 +10,7 @@ Make sure that the `build-essential` and `git` packages are installed, then clon
 git clone https://github.com/batden/epanema.git .epanema
 ```
 
-That creates a new [hidden folder](https://help.ubuntu.com/stable/ubuntu-help/files-hidden#) named _".epanema"_ in your home directory.
+That creates a new [hidden folder](https://itsfoss.com/hide-folders-and-show-hidden-files-in-ubuntu-beginner-trick/) named _".epanema"_ in your home directory.
 
 Please copy the file _"epanema.sh"_ from this new folder to the download folder.
 

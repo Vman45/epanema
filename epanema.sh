@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# EPANEMA.SH IS A WORK IN PROGRESS!
+# EPANEMA.SH
 
 # This Bash script allows you to easily and safely download, install or update Enlightenment 0.23
 # (aka E23) on Ubuntu Eoan Ermine; or helps you perform a clean uninstall of E23.
@@ -696,22 +696,16 @@ remov_bin_deps() {
 }
 
 uninstall_e23() {
+  ESRC=$(cat $HOME/.cache/ebuilds/storepath)
+
   clear
   printf "\n\n$BDR%s %s\n\n" "* UNINSTALLING ENLIGHTENMENT DESKTOP *"
+
+  cd $HOME
 
   for I in $PROG_MN; do
     cd $ESRC/enlightenment23/$I && remov_eprog_mn
   done
-
-  cd $HOME
-  rm -rf $ESRC/enlightenment23
-  rm -rf $SCRFLR
-  rm -rf .e
-  rm -rf .elementary
-  rm -rf .cache/ebuilds
-  rm -rf .cache/efreet
-  rm -rf .cache/evas_gl_common_caches
-  rm -rf .config/terminology
 
   cd /etc
   sudo rm -rf sysactions.conf
@@ -809,6 +803,13 @@ uninstall_e23() {
   sudo rm -rf org.enlightenment.Ethumb.service
 
   cd $HOME
+  rm -rf $ESRC/enlightenment23
+  rm -rf $SCRFLR
+  rm -rf .e
+  rm -rf .elementary
+  rm -rf .cache/efreet
+  rm -rf .cache/evas_gl_common_caches
+  rm -rf .config/terminology
 
   find /usr/local/share/locale/*/LC_MESSAGES 2>/dev/null | while read -r I; do
     echo "$I" | xargs sudo rm -rf $(grep -E 'efl|enlightenment|terminology')
@@ -851,6 +852,7 @@ uninstall_e23() {
   remov_preq
   remov_bin_deps
 
+  rm -rf $HOME/.cache/ebuilds
   mv $DOCDIR/installed_pkgs.txt $DOCDIR/inst_pkgs_bak.txt
   mv $DOCDIR/installed_repos.txt $DOCDIR/inst_repos_bak.txt
 

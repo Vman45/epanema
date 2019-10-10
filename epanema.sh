@@ -546,9 +546,6 @@ install_now() {
   cowsay "Now reboot your computer then select Enlightenment on the login screen... \
   That's All Folks!" | lolcat -a
   echo
-  # If you cannot login to Enlightenment using gdm3 (nothing happens when you click on it), try this workaround:
-  # edit /etc/gdm3/custom.conf and uncomment the line "#WaylandEnable=false"
-  # Then reboot your system.
 
   cp -f $DLDIR/epanema.sh $HOME/.local/bin
 }

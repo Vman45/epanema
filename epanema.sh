@@ -287,6 +287,7 @@ build_optim() {
 }
 
 rebuild_optim() {
+  ESRC=$(cat $HOME/.cache/ebuilds/storepath)
   e_tokens
   elap_start
 
@@ -337,6 +338,7 @@ rebuild_optim() {
 }
 
 rebuild_wld() {
+  ESRC=$(cat $HOME/.cache/ebuilds/storepath)
   e_tokens
   elap_start
 

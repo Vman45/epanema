@@ -77,15 +77,16 @@ libudev-dev libudisks2-dev libunibreak-dev libunwind-dev \
 libuv1-dev libvlc-dev libwebp-dev libxcb-keysyms1-dev libxcursor-dev \
 libxine2-dev libxinerama-dev libxkbcommon-x11-dev libxkbfile-dev \
 libxrandr-dev libxss-dev libxtst-dev linux-tools-common lolcat \
-manpages-dev meson ninja-build texlive-base valgrind wayland-protocols \
-wmctrl xserver-xephyr xwayland zenity"
+manpages-dev meson ninja-build texlive-base unity-greeter-badges \
+valgrind wayland-protocols wmctrl xserver-xephyr xwayland zenity"
 
 # (2) aspell, cmake, faenza-icon-theme, gstreamer1.0-libav,
 # gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good,
 # gstreamer1.0-plugins-ugly, imagemagick, libexif-dev,
 # libgeoclue-2-dev, libscim-dev, libosmesa6-dev,
 # linux-tools-common, libvlc-dev, libxine2-dev,
-# manpages-dev, texlive-base, valgrind, xserver-xephyr.
+# manpages-dev, texlive-base, unity-greeter-badges,
+# valgrind, xserver-xephyr.
 # (3) ccache, cowsay, git, lolcat, wmctrl, zenity.
 
 # Programs from GIT repositories (latest source code).

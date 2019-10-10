@@ -554,14 +554,7 @@ install_now() {
 
 update_go() {
   clear
-  if [ ! -d $ESRC/enlightenment23 ]; then
-    printf "\n$BDR%s %s\n" "NOTHING TO UPDATE!"
-    printf "$BDR%s $OFF%s\n\n" "SCRIPT ABORTED."
-    beep_exit
-    exit 1
-  else
-    printf "\n$BDG%s $OFF%s\n\n" "* UPDATING ENLIGHTENMENT DESKTOP: RELEASE BUILD *"
-  fi
+  printf "\n$BDG%s $OFF%s\n\n" "* UPDATING ENLIGHTENMENT DESKTOP: RELEASE BUILD *"
 
   cp -f $SCRFLR/epanema.sh $HOME/.local/bin
   chmod +x $HOME/.local/bin/epanema.sh
@@ -586,14 +579,7 @@ update_go() {
 
 wld_go() {
   clear
-  if [ ! -d $ESRC/enlightenment23 ]; then
-    printf "\n$BDR%s %s\n" "NOTHING TO UPDATE!"
-    printf "$BDR%s $OFF%s\n\n" "SCRIPT ABORTED."
-    beep_exit
-    exit 1
-  else
-    printf "\n$BDY%s $OFF%s\n\n" "* UPDATING ENLIGHTENMENT DESKTOP: WAYLAND BUILD *"
-  fi
+  printf "\n$BDY%s $OFF%s\n\n" "* UPDATING ENLIGHTENMENT DESKTOP: WAYLAND BUILD *"
 
   cp -f $SCRFLR/epanema.sh $HOME/.local/bin
   chmod +x $HOME/.local/bin/epanema.sh

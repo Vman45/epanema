@@ -80,14 +80,14 @@ libxrandr-dev libxss-dev libxtst-dev linux-tools-common lolcat \
 manpages-dev meson ninja-build texlive-base unity-greeter-badges \
 valgrind wayland-protocols wmctrl xserver-xephyr xwayland zenity"
 
-# (2) aspell, cmake, faenza-icon-theme, gstreamer1.0-libav,
+# (2|Optional) aspell, cmake, faenza-icon-theme, gstreamer1.0-libav,
 # gstreamer1.0-plugins-bad, gstreamer1.0-plugins-good,
 # gstreamer1.0-plugins-ugly, imagemagick, libexif-dev,
 # libgeoclue-2-dev, libscim-dev, libosmesa6-dev,
 # linux-tools-common, libvlc-dev, libxine2-dev,
 # manpages-dev, texlive-base, unity-greeter-badges,
 # valgrind, xserver-xephyr.
-# (3) ccache, cowsay, git, lolcat, wmctrl, zenity.
+# (3|Required) ccache, cowsay, git, lolcat, wmctrl, zenity.
 
 # Programs from GIT repositories (latest source code).
 CLONEFL="git clone https://git.enlightenment.org/core/efl.git"

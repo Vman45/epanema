@@ -132,7 +132,7 @@ sel_menu() {
 
     # Hints.
     # 1/2: A feature-rich, decently optimized build; however, occasionally technical glitches do happen...
-    # 3: Running Enlightenment as a Wayland compositor is still considered experimental.
+    # 3: Same as above, but running Enlightenment as a Wayland compositor is still considered experimental.
     # 4: Nuke 'Em All!
 
     sleep 1 && printf "$ITA%s $OFF%s\n\n" "Or press Ctrl+C to quit."

@@ -24,14 +24,15 @@
 
 # Once installed, you can update your shiny new Enlightenment desktop whenever you want to.
 # However, because software gains entropy over time (performance regression, unexpected
-# behavior... this is especially true when dealing with source code), I highly recommend
+# behavior... this is especially true when dealing with source code), we highly recommend
 # doing a complete uninstall and reinstall of E23 every two weeks or so for an optimal
 # user experience.
 
 # NOTE that you need to uninstall all E23 programs *before* upgrading your current system
 # to a newer version of Ubuntu.
 
-# EPANEMA.SH is written by similar@orange.fr, feel free to use this script as you see fit.
+# EPANEMA.SH is written by similar@orange.fr and carlasensa@sfr.fr,
+# feel free to use this script as you see fit.
 # Before reporting an issue, make sure you are using the latest version.
 
 # Please consider sending me a tip via https://www.paypal.me/PJGuillaumie

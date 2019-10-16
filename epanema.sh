@@ -35,7 +35,7 @@
 # feel free to use this script as you see fit.
 # Before reporting an issue, make sure you are using the latest version.
 
-# Please consider sending me a tip via https://www.paypal.me/PJGuillaumie
+# Please consider sending us a tip via https://www.paypal.me/PJGuillaumie
 # or starring the repository to show your support.
 # Cheers!
 
@@ -669,7 +669,7 @@ remov_bin_deps() {
   case $answer in
     [yY])
       printf "\n%s\n\n" "Please read the APT report carefully before pressing y to continue with the uninstall."
-      sleep 4
+      sleep 6
       sudo apt autoremove $DEPS
       echo
       ;;

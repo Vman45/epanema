@@ -39,8 +39,13 @@
 # or starring the repository to show your support.
 # Cheers!
 
-# Repositories and gists: https://github.com/batden
+# Github repositories: https://github.com/batden
 # Eyecandy for your Enlightenment desktop: https://extra.enlightenment.org/
+
+# Script debugging.
+# export PS4='+ $LINENO: '
+# export LC_ALL=C
+# set -vx
 
 # LOCAL VARIABLES
 # ---------------

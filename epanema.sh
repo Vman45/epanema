@@ -55,11 +55,11 @@ OFF="\e[0m"    # Turn off ANSI colors and formatting.
 PREFIX=/usr/local
 DLDIR=$(xdg-user-dir DOWNLOAD)
 DOCDIR=$(xdg-user-dir DOCUMENTS)
-ICNV=libiconv-1.16
 SCRFLR=$HOME/.epanema
 CONFG="./configure --prefix=$PREFIX"
 SNIN="sudo ninja -C build install"
 RELEASE=$(lsb_release -sc)
+ICNV=libiconv-1.16
 
 # Build dependencies, recommended(2) and script-related(3) packages.
 DEPS="aspell automake build-essential ccache check cmake cowsay doxygen \
@@ -476,18 +476,7 @@ set_p_src() {
 }
 
 get_preq() {
-  cd $DLDIR
-  printf "\n\n$BLD%s $OFF%s\n\n" "Installing prerequisites..."
-  wget -c https://ftp.gnu.org/pub/gnu/libiconv/$ICNV.tar.gz
-  tar xzvf $ICNV.tar.gz -C $ESRC
-  cd $ESRC/$ICNV
-  $CONFG
-  make
-  sudo make install
-  sudo ldconfig
-  rm -rf $DLDIR/$ICNV.tar.gz
-  echo
-
+  printf "\n\n$BLD%s $OFF%s\n\n" "Installing rlottie..."
   cd $ESRC
   git clone https://github.com/Samsung/rlottie.git
   cd $ESRC/rlottie
@@ -619,37 +608,23 @@ remov_eprog_mn() {
 }
 
 remov_preq() {
-  if [ -d $ESRC/$ICNV ]; then
+  if [ -d $ESRC/rlottie ]; then
     echo
     beep_question
-    read -t 12 -p "Remove libiconv and rlottie? [Y/n] " answer
+    read -t 12 -p "Remove rlottie? [Y/n] " answer
     case $answer in
       [yY])
         echo
-        cd $ESRC/$ICNV
-        sudo make uninstall
-        make maintainer-clean
-        cd .. && rm -rf $ESRC/$ICNV
-        sudo rm -rf /usr/local/bin/iconv
-        echo
-
         cd $ESRC/rlottie
         sudo ninja -C build uninstall
         cd .. && rm -rf rlottie
         echo
         ;;
       [nN])
-        printf "\n%s\n\n" "(do not remove prerequisites... OK)"
+        printf "\n%s\n\n" "(do not remove rlottie... OK)"
         ;;
       *)
         echo
-        cd $ESRC/$ICNV
-        sudo make uninstall
-        make maintainer-clean
-        cd .. && rm -rf $ESRC/$ICNV
-        sudo rm -rf /usr/local/bin/iconv
-        echo
-
         cd $ESRC/rlottie
         sudo ninja -C build uninstall
         cd .. && rm -rf rlottie
@@ -838,6 +813,16 @@ uninstall_e23() {
   fi
 
   remov_preq
+
+  if [ -d $ESRC/$ICNV ]; then
+    cd $ESRC/$ICNV
+    sudo make uninstall
+    make maintainer-clean
+    cd .. && rm -rf $ESRC/$ICNV
+    sudo rm -rf /usr/local/bin/iconv
+    echo
+  fi
+
   remov_bin_deps
 
   rm -rf $HOME/.cache/ebuilds

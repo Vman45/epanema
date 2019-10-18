@@ -65,7 +65,7 @@ RELEASE=$(lsb_release -sc)
 ICNV=libiconv-1.16
 
 # Build dependencies, recommended(2) and script-related(3) packages.
-DEPS="aspell automake build-essential ccache check cmake cowsay doxygen \
+DEPS="aspell build-essential ccache check cmake cowsay doxygen \
 faenza-icon-theme git gstreamer1.0-libav gstreamer1.0-plugins-bad \
 gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly imagemagick \
 libasound2-dev libavahi-client-dev libblkid-dev libbluetooth-dev \

@@ -163,6 +163,12 @@ bin_deps() {
     sed -i '/linux-tools*/d' $DOCDIR/installed_pkgs.txt
   fi
 
+  # Backup list of manually installed packages.
+  if [ ! -f $DOCDIR/installed_manual_pkgs.txt ]; then
+    echo $(comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz \
+      | sed -n 's/^Package: //p' | sort -u)) >$DOCDIR/installed_manual_pkgs.txt
+  fi
+
   # Backup list of currently installed repositories.
   if [ ! -f $DOCDIR/installed_repos.txt ]; then
     grep -Erh ^deb /etc/apt/sources.list* >$DOCDIR/installed_repos.txt
@@ -573,9 +579,6 @@ wld_go() {
   cp -f $SCRFLR/epanema.sh $HOME/.local/bin
   chmod +x $HOME/.local/bin/epanema.sh
   sleep 1
-
-  printf "\n$BLD%s $OFF%s\n\n" "Satisfying dependencies under Ubuntu ${RELEASE^}..."
-  bin_deps
 
   rebuild_wld
 

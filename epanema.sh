@@ -307,6 +307,7 @@ rebuild_optim() {
   printf "\n$BLD%s $OFF%s\n\n" "Updating rlottie..."
   git reset --hard &>/dev/null
   git pull
+  echo
   sudo chown $USER build/.ninja*
   meson configure -Dexample=false -Dbuildtype=release build
   ninja -C build || true
@@ -358,6 +359,7 @@ rebuild_wld() {
   printf "\n$BLD%s $OFF%s\n\n" "Updating rlottie..."
   git reset --hard &>/dev/null
   git pull
+  echo
   sudo chown $USER build/.ninja*
   meson configure -Dexample=false -Dbuildtype=release build
   ninja -C build || true

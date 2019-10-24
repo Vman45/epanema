@@ -585,8 +585,6 @@ wld_go() {
 
   sudo mv -f /usr/local/etc/enlightenment/sysactions.conf /etc
 
-  cd /usr/share && sudo rm -rf xsessions/enlightenment.desktop
-
   sudo updatedb
   beep_ok
 

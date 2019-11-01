@@ -427,13 +427,13 @@ do_tests() {
   fi
 
   # Users of VirtualBox: Comment out the following lines if you get unexpected network errors.
-  #git ls-remote https://git.enlightenment.org/core/efl.git HEAD &>/dev/null
-  #if [ $? -ne 0 ]; then
-  #printf "\n$BDR%s %s\n" "REMOTE HOST IS UNREACHABLE——TRY AGAIN LATER"
-  #printf "$BDR%s $OFF%s\n\n" "OR CHECK YOUR INTERNET CONNECTION."
-  #beep_exit
-  #exit 1
-  #fi
+  git ls-remote https://git.enlightenment.org/core/efl.git HEAD &>/dev/null
+  if [ $? -ne 0 ]; then
+    printf "\n$BDR%s %s\n" "REMOTE HOST IS UNREACHABLE——TRY AGAIN LATER"
+    printf "$BDR%s $OFF%s\n\n" "OR CHECK YOUR INTERNET CONNECTION."
+    beep_exit
+    exit 1
+  fi
 
   if [ ! -d $SCRFLR ]; then
     printf "\n$BDR%s $OFF%s\n\n" "EPANEMA FOLDER NOT FOUND!"

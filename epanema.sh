@@ -795,9 +795,9 @@ uninstall_e23() {
   remov_preq
 
   rm -rf $HOME/.cache/ebuilds
-  mv $DOCDIR/installed_pkgs.txt $DOCDIR/inst_pkgs_bak.txt
-  mv $DOCDIR/installed_manually_pkgs.txt $DOCDIR/inst_m_pkgs_bak.txt
-  mv $DOCDIR/installed_repos.txt $DOCDIR/inst_repos_bak.txt
+  mv -f $DOCDIR/installed_pkgs.txt $DOCDIR/inst_pkgs_bak.txt
+  mv -f $DOCDIR/installed_manually_pkgs.txt $DOCDIR/inst_m_pkgs_bak.txt
+  mv -f $DOCDIR/installed_repos.txt $DOCDIR/inst_repos_bak.txt
 
   sudo rm -rf /usr/lib/libgnuintl.so.8
   sudo rm -rf /usr/lib/libintl.so
